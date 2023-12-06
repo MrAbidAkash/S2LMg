@@ -1,5 +1,6 @@
 "use client";
 
+import ThemeUi from "@/components/ThemeUi";
 import { ModeToggle } from "@/components/mode.toggle";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -13,93 +14,111 @@ const Heading = () => {
     // 👆 false parameter is required for react project
   }, []);
   return (
-    <div className=" flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1020px]  ">
-      <Link href={"/"}>
-        <Image alt="stort2listen" src="/s2l.png" width={150} height={40} />
-      </Link>
-      <div className="flex flex-row items-center justify-center gap-3 h-4 200">
-        {/* <select data-choose-theme>
-          <option value="dark">Dark</option>
-          <option value="light">light</option>
-          <option value="sunset">Sunset</option>
-        </select> */}
+    <div className="drawer">
+      <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        {/*  <div className=" flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1020px]  ">
+          <Link href={"/"}>
+            <Image alt="stort2listen" src="/s2l.png" width={150} height={40} />
+          </Link>
+          <div className="flex flex-row items-center justify-center gap-3 h-4 200">
+    
 
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn m-1">
-            Theme
-            <svg
-              width="12px"
-              height="12px"
-              className="h-2 w-2 fill-current opacity-60 inline-block"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 2048 2048"
-            >
-              <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-            </svg>
+            <ThemeUi />
+
+            <Link href="/signup" className="">
+              <h3>Sign Up</h3>
+            </Link>
+            <Separator orientation="vertical" />
+            <Link href="/login">
+              <h3>Sign in</h3>
+            </Link>
           </div>
-          <ul
-            tabIndex={0}
-            className="dropdown-content z-[1] p-2 shadow-2xl bg-base-300 rounded-box w-52"
-          >
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Sunset"
-                value="sunset"
+        </div> */}
+        <div className="flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1020px]">
+          <div className="flex-none md:hidden">
+            <label
+              htmlFor="my-drawer-3"
+              aria-label="open sidebar"
+              className="btn btn-square btn-ghost"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                className="inline-block w-6 h-6 stroke-current"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
+          </div>
+          <div className=" ">
+            <Link href={"/"}>
+              <Image
+                alt="stort2listen"
+                src="/s2l.png"
+                width={150}
+                height={40}
               />
-            </li>
+            </Link>
+          </div>
 
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="light"
-                value="light"
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Dark"
-                value="dark"
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Retro"
-                value="retro"
-              />
-            </li>
-            <li>
-              <input
-                type="radio"
-                name="theme-dropdown"
-                className="theme-controller btn btn-sm btn-block btn-ghost justify-start"
-                aria-label="Forest"
-                value="forest"
-              />
-            </li>
-          </ul>
+          <div className="flex flex-row items-center justify-center gap-3">
+            <ThemeUi />
+            <div className="flex-none hidden md:flex  flex-row items-center justify-center gap-3 h-4 200">
+              <Link href="/signup" className="">
+                <h3>Sign Up</h3>
+              </Link>
+              <Separator orientation="vertical" />
+              <Link href="/login">
+                <h3>Sign in</h3>
+              </Link>
+            </div>
+          </div>
         </div>
-
-        <Link href="/signup" className="">
-          <h3>Sign Up</h3>
-        </Link>
-        <Separator orientation="vertical" />
-        <Link href="/login">
-          <h3>Sign in</h3>
-        </Link>
       </div>
-      {/*       <ModeToggle/>
-       */}{" "}
+      <div className="drawer-side">
+        <label
+          htmlFor="my-drawer-3"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+
+        <ul className="menu p-4 w-80 min-h-full bg-base-200">
+          <label
+            htmlFor="my-drawer-3"
+            aria-label="close sidebar"
+            className="drawer-overlay"
+          >
+            {" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="inline-block w-6 h-6 stroke-current"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </label>
+          {/* Sidebar content here */}
+          <li>
+            <a>Sidebar Item 1</a>
+          </li>
+          <li>
+            <a>Sidebar Item 2</a>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

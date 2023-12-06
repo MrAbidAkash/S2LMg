@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 
-export function Onlys2kCards(props:any) {
-
+export function Onlys2kCards(props: any) {
   return (
-    <div className="snap-start h-[350px] min-w-[285px] max-w-[450px]  min-h-[300px] max-h-[400px] cursor-pointer ">
+    <div className="snap-start h-[350px] w-[285px] max-w-[450px]  min-h-[300px] max-h-[400px] cursor-pointer ">
       <Image
         src={`/${props.imgSrc}`}
         alt="card-image"

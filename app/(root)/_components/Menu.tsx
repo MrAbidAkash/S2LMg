@@ -21,11 +21,10 @@ const Menu = () => {
       <div className="flex flex-row gap-3">
         <div className="flex flex-row items-center  opacity-50 rounded-sm  py-2 px-2 ">
           <input
-            className="input input-bordered w-96 max-w-xs outline- px-2"
+            className="input input-bordered w-96 max-w-xs  px-2"
             placeholder="Find your great listen"
           />
-          <div className="indicator">
-            <span className="indicator-item badge badge-secondary">new</span>
+          <div className="">
             <button className="btn ">
               <MagnifyingGlassIcon className="h-6 w-6 cursor-pointer" />
             </button>

@@ -38,7 +38,7 @@ const FamousPod = () => {
           />
         )}
         navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-0 left-2/4 z-[99] flex -translate-x-2/4 gap-2">
+          <div className="absolute bottom-0 left-2/4 z-20 flex -translate-x-2/4 gap-2">
             {new Array(length).fill("").map((_, i) => (
               <span
                 key={i}
