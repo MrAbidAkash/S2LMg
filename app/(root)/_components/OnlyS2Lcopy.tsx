@@ -1,8 +1,8 @@
 "use client";
 
-import { Carousel } from "@material-tailwind/react";
-import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import { Onlys2kCards } from "./Onlys2kCards";
+/* import { Carousel } from "@material-tailwind/react";
+ */ import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import { Onlys2kCards } from "./ImagesSeed";
 
 const OnlyS2Lcopy = () => {
   const imgForDemos: string[] = [
@@ -70,6 +70,7 @@ const OnlyS2Lcopy = () => {
   };
   return (
     <div className="items-center justify-center text-center relative space-y-10">
+      {/* 
       <div>
         <h2 className="text-2xl">Onlycopy from Audible</h2>
         <p className="text-sm font-semibold  ">
@@ -125,6 +126,7 @@ const OnlyS2Lcopy = () => {
         <div></div>
         <div></div>
       </Carousel>
+     */}
     </div>
   );
 };

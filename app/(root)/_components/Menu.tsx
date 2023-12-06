@@ -14,14 +14,15 @@ import { MenuSeed } from "./MenuSeed";
 
 const Menu = () => {
   return (
-    <div className="flex flex-row items-center justify-between  text-center">
-      <div className="flex flex-row items-center justify-center text-center py-2 ">
+    <div className="flex   flex-col md:flex-row items-center justify-between  text-center">
+      <div className=" max-sm:hidden flex flex-row  items-center justify-center text-center py-2 ">
         <MenuSeed />
       </div>
       <div className="flex flex-row gap-3">
-        <div className="flex flex-row items-center  opacity-50 rounded-sm  py-2 px-2 ">
+        <div className="flex flex-row items-center   outline outline-primary-content rounded-md ">
           <input
-            className="input input-bordered w-96 max-w-xs  px-2"
+            type="text"
+            className=" p-3 bg-transparent text- outline-none w-96 max-w-xs  "
             placeholder="Find your great listen"
           />
           <div className="">

@@ -6,7 +6,7 @@ html,
 body,
 :root {
   
-  
+  height: 100%;
 }
 
 @layer base {
@@ -106,15 +106,56 @@ from{
     transform: translateX(0);
   }
 to{
-    transform: translateX(-100%);
+    transform: translateX(-70%);
   }
 }
 .logo-slide{
-  animation: 10s slide 1 linear ;
+  animation: 15s slide infinite linear ;
+
+}
+.logo-slide:hover{
+  animation-play-state: paused;
+
 }
 
 @layer utilities{
 .logo-slide-pause{
   animation-play-state: paused;
 }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+.animate-fadeDown{
+  animation: fadeDown 1s  ;
+}
+.animate-fadeUp{
+  animation: fadeUp 1s  ;
+}
+.swiper-pagination {
+    position: none;
+    text-align: center;
+    transition: 300ms opacity;
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
 }

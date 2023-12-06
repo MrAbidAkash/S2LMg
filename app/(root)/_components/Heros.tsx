@@ -3,14 +3,16 @@ import Image from "next/image";
 
 const Heros = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-x-5">
+    <div className="flex flex-col md:flex-row items-center gap-x-20 animate-fadeUp">
       <div className=" space-y-4">
-        <div className="space-y-2">
+        <div className="space-y-4">
           <div>
-            <h2 className="text-2xl font-extrabold">Get your <br /> imagination going</h2>
+            <h2 className="text-5xl font-extrabold">
+              Get your <br /> imagination going
+            </h2>
           </div>
-          <div>
-            <p className="text-sm font-semibold   ">
+          <div className="">
+            <p className="text-sm font-semibold opacity-80 ">
               The best audiobooks and Originals. The most entertainment. The
               podcasts you want to hear.
             </p>

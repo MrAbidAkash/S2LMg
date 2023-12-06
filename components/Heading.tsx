@@ -8,6 +8,9 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { themeChange } from "theme-change";
 
+
+
+
 const Heading = () => {
   useEffect(() => {
     themeChange(false);
@@ -17,7 +20,7 @@ const Heading = () => {
     <div className="drawer">
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
-        {/*  <div className=" flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1020px]  ">
+        {/*  <div className=" flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-max-w-[1140px]  ">
           <Link href={"/"}>
             <Image alt="stort2listen" src="/s2l.png" width={150} height={40} />
           </Link>
@@ -35,7 +38,7 @@ const Heading = () => {
             </Link>
           </div>
         </div> */}
-        <div className="flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1020px]">
+        <div className="flex flex-row items-center justify-between gap-3 py-4 px-6 mx-auto md:max-w-[1140px] ">
           <div className="flex-none md:hidden">
             <label
               htmlFor="my-drawer-3"
@@ -62,8 +65,9 @@ const Heading = () => {
               <Image
                 alt="stort2listen"
                 src="/s2l.png"
-                width={150}
+                width={140}
                 height={40}
+                className=" text-red-700"
               />
             </Link>
           </div>

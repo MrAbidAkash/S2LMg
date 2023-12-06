@@ -1,80 +1,64 @@
 "use client";
 
-import {
-  Carousel,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
-
 import { RecentCards } from "./RecentCards";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
+import { stringify } from "querystring";
+import SwiperUi from "./Swiper";
+import SwiperUi2 from "./Swiper2";
 
 const RecentPod = () => {
+  const imgForDemos: string[] = [
+    "1.png",
+    "2.png",
+    "3.png",
+    "4.png",
+    "5.png",
+    "6.png",
+  ];
+
+  const slideLeft = () => {
+    let slider: any = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  };
+  const slideRight = () => {
+    let slider: any = document.getElementById("slider");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  };
+
   return (
-    <div className="items-center justify-center relative space-y-5 flex flex-col my-5">
-      <div>
-        <h2 className="text-2xl">
-          We&apos;ve got what everyone&apos;s listening to
+    <div className="items-center justify-center text-center relative space-y-20">
+      <div className="space-y-3">
+        <h2 className="text-5xl font-bold text-warning">
+          The listening never has to stop
         </h2>
-        <p className="text-sm font-semibold  ">
-          Bestsellers. New releases. That story you&apos;ve been waiting for.
+        <p className="text-lg font-semibold opacity-70 ">
+          Thousands of included titles. No cap on listening time.
         </p>
       </div>
-      <Carousel
-        className="rounded-xl mb-10 overflow-hidden "
-        loop={true}
-        autoplay={true}
-        nextArrow={({ handleNext }) => (
-          <ChevronRightIcon
-            color="black"
-            onClick={handleNext}
-            className="!absolute top-[40%] !right-0 -translate-y-2/4 w-8 h-16 bg-blue-gray-100 bg-opacity-40 hover:bg-opacity-90   hover:bg-blue-gray-100 cursor-pointer 
-             "
-          />
-        )}
-        prevArrow={({ handlePrev }) => (
-          <ChevronLeftIcon
-            onClick={handlePrev}
-            className="!absolute top-[40%] left-0 -translate-y-2/4 w-8 h-16 cursor-pointer bg-blue-gray-100 bg-opacity-40 hover:bg-opacity-90  hover:bg-blue-gray-100 text-black "
-          />
-        )}
-        navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-0 left-2/4 z-20 flex -translate-x-2/4 gap-2">
-            {new Array(length).fill("").map((_, i) => (
-              <span
-                key={i}
-                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                  activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
-                }`}
-                onClick={() => setActiveIndex(i)}
-              />
-            ))}
+
+      <div className="relative items-center">
+        {/*  <ChevronLeftIcon
+          onClick={slideLeft}
+          className="w-10 h-20 absolute top-2/4 z-50 cursor-pointer left-[-20px]  bg-blue-gray-100 bg-opacity-40 -translate-y-2/4 hover:bg-opacity-90  hover:bg-blue-gray-100 text-black "
+        /> */}
+        {/* <div
+          id="slider"
+          className="snap-x flex my-5 z-10 overflow-x-scroll whitespace-nowrap scroll-smooth example items-center hover:logo-slide-pause  "
+        >
+          <div className="logo-slide  flex flex-row  space-x-4 mr-4  ">
+            {imgForDemos.map((img: string) => {
+              return <Onlys2kCards key={img.length} imgSrc={img} />;
+            })}
           </div>
-        )}
-      >
-        <div className="flex flex-row  items-center space-x-4  my-5  ">
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-        </div>
-        <div className="flex flex-row  items-center space-x-4  my-5    ">
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-        </div>
-        <div className="flex flex-row  items-center space-x-4  my-5    ">
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-          <RecentCards />
-        </div>
-      </Carousel>
+        </div> */}
+
+        <SwiperUi2 />
+
+        {/* <ChevronRightIcon
+          onClick={slideRight}
+          className="w-10 h-20  absolute right-[-20px] top-[50%] -translate-y-2/4 z-50 cursor-pointer bg-blue-gray-100 bg-opacity-40 hover:bg-opacity-90  hover:bg-blue-gray-100 text-black "
+        /> */}
+      </div>
     </div>
   );
 };

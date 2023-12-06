@@ -1,11 +1,9 @@
 "use client";
 
-import { CarouselStylesType } from "@material-tailwind/react";
 import { RecentCards } from "./RecentCards";
-import { Carousel, slider } from "@material-tailwind/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
-import { Onlys2kCards } from "./Onlys2kCards";
 import { stringify } from "querystring";
+import SwiperUi from "./Swiper";
 
 const OnlyS2L = () => {
   const imgForDemos: string[] = [
@@ -27,39 +25,37 @@ const OnlyS2L = () => {
   };
 
   return (
-    <div className="items-center justify-center text-center relative space-y-10">
-      <div>
-        <h2 className="text-2xl">Only1 from Audible</h2>
-        <p className="text-sm font-semibold  ">
+    <div className="items-center justify-center text-center relative space-y-20">
+      <div className="space-y-3">
+        <h2 className="text-5xl font-bold text-info">Only from Story2Listen</h2>
+        <p className="text-lg font-semibold opacity-70 ">
           Groundbreaking Originals and exclusives from A-list celebs and
           emerging talent.
         </p>
       </div>
 
       <div className="relative items-center">
-        <ChevronLeftIcon
+        {/*  <ChevronLeftIcon
           onClick={slideLeft}
           className="w-10 h-20 absolute top-2/4 z-50 cursor-pointer left-[-20px]  bg-blue-gray-100 bg-opacity-40 -translate-y-2/4 hover:bg-opacity-90  hover:bg-blue-gray-100 text-black "
-        />
-        <div
+        /> */}
+        {/* <div
           id="slider"
-          className="snap-x flex my-5 z-10 overflow-x-scroll whitespace-nowrap scroll-smooth example items-center hover:logo-slide-pause "
+          className="snap-x flex my-5 z-10 overflow-x-scroll whitespace-nowrap scroll-smooth example items-center hover:logo-slide-pause  "
         >
           <div className="logo-slide  flex flex-row  space-x-4 mr-4  ">
             {imgForDemos.map((img: string) => {
               return <Onlys2kCards key={img.length} imgSrc={img} />;
             })}
           </div>
-          <div className="logo-slide  flex flex-row space-x-4 ">
-            {imgForDemos.map((img: string) => {
-              return <Onlys2kCards key={img.length} imgSrc={img} />;
-            })}
-          </div>
-        </div>
-        <ChevronRightIcon
+        </div> */}
+
+        <SwiperUi />
+
+        {/* <ChevronRightIcon
           onClick={slideRight}
           className="w-10 h-20  absolute right-[-20px] top-[50%] -translate-y-2/4 z-50 cursor-pointer bg-blue-gray-100 bg-opacity-40 hover:bg-opacity-90  hover:bg-blue-gray-100 text-black "
-        />
+        /> */}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const ContactPage = () => {
             Name
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow bg-transparent outline outline-primary-content  outline-4 rounded w-full py-2 px-3 "
             id="name"
             type="text"
             placeholder="Your Name"
@@ -24,7 +24,7 @@ const ContactPage = () => {
             Email
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow bg-transparent outline outline-primary-content  outline-4 rounded w-full py-2 px-3 700 leading-tight "
             id="email"
             type="email"
             placeholder="Your Email"
@@ -36,7 +36,7 @@ const ContactPage = () => {
             Message
           </label>
           <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow bg-transparent outline outline-primary-content  outline-4 rounded w-full py-2 px-3 700 leading-tight "
             id="message"
             placeholder="Your Message"
             rows={4}
@@ -45,7 +45,7 @@ const ContactPage = () => {
 
         <div className="flex items-center justify-center">
           <button
-            className="bg-blue-500 hover:bg-blue-700  font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="btn btn-primary font-bold py-2 px-4 rounded "
             type="button"
           >
             Submit

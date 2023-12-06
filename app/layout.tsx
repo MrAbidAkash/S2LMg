@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import Footer from "../components/Footer";
 import Menu from "./(root)/_components/Menu";
-import Heading from "./(root)/_components/Heading";
+import Heading from "../components/Heading";
 import Offer from "./(root)/_components/Offer";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning data-theme="sunset">
+    <html lang="en" suppressHydrationWarning data-theme="dark">
       <body data-theme="" className={` ${inter.className} `}>
-        <div className="fixed top-0  w-full z-50 bg-inherit bg- bg-opacity-5 shadow-sm">
-        {/*   <Offer/> */}
+        <div className="fixed top-0  w-full z-50 bg-inherit bg- bg-opacity-5 shadow-md animate-fadeDown">
+          {/*   <Offer/> */}
           <Heading />
         </div>
 
-        <div className="space-y-5 p-6 flex flex-col mt-28  md:w-[1020px] mx-auto ">
+        <div className="space-y-5 p-6 flex flex-col mt-28  md:max-w-[1140px] mx-auto animate-fadeDown ">
           <Menu />
         </div>
         {children}

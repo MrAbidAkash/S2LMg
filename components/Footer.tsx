@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className=" flex space-x-5 justify-center py-16 text-sm md:text-xl   md:w-[1020px] mx-auto">
+    <div className=" flex space-x-5 justify-center py-16 text-sm md:text-xl  px-6 md:max-w-[1140px] mx-auto mt-32">
       <p className="flex-grow w-[30%]">© Copyright 2023 Story2Listen Inc.</p>
       <ul className="w-[65%] flex flex-wrap  h-4  items-center gap-x-4 gap-y-2 justify-center ">
         <li>

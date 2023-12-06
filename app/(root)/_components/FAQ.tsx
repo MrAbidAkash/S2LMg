@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from "@material-tailwind/react";
+
 import { ChevronDown, PlayIcon } from "lucide-react";
+import { Accordion } from "@/components/ui/accordion";
+import { AccordionHeader } from "@radix-ui/react-accordion";
 
 function Icon({ id, open }: any) {
   return (
@@ -41,116 +39,66 @@ export function FAQ() {
     <div className="flex flex-col space-y-10">
       <h2 className="text-4xl font-bold ">Frequently asked questions</h2>
       <div>
-        <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
-          <AccordionHeader className="" onClick={() => handleOpen(1)}>
-            <div className="flex flex-row items-center space-x-2">
-              <PlayIcon size={16} />
-              <p> at is Material Tailwind?</p>
-            </div>
-          </AccordionHeader>
-          <AccordionBody>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
+        <div className="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div className="collapse-title text-xl font-medium flex items-center gap-x-2">
+            <PlayIcon size={16} />
+            Click to open this one and close others
+          </div>
+          <div className="collapse-content">
+            <p className="   opacity-80">
+              constantly growing. We&apos;re constantly making mistakes.
               We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              mistakes. We&apos;re We&apos;re not always in the position that we
+              want to be at. We&apos;re constantly growing. We&apos;re
+              constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams. We&apos;re not always
+              in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re
+              constantly trying to express ourselves and actualize our dreams.
             </p>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
+          </div>
+        </div>
+        <div className="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div className="collapse-title text-xl font-medium flex items-center gap-x-2">
+            <PlayIcon size={16} />
+            Click to open this one and close others
+          </div>
+          <div className="collapse-content">
+            <p className=" opacity-80">
+              constantly growing. We&apos;re constantly making mistakes.
               We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              mistakes. We&apos;re We&apos;re not always in the position that we
+              want to be at. We&apos;re constantly growing. We&apos;re
+              constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams. We&apos;re not always
+              in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re
+              constantly trying to express ourselves and actualize our dreams.
             </p>
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 2} icon={<Icon id={2} open={open} />}>
-          <AccordionHeader
-            className=" hover:"
-            onClick={() => handleOpen(2)}
-          >
-            <div className="flex flex-row items-center space-x-2">
-              <PlayIcon size={16} />
-              <p> at is Material Tailwind?</p>
-            </div>
-          </AccordionHeader>
-          <AccordionBody>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
+          </div>
+        </div>
+        <div className="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div className="collapse-title text-xl font-medium flex items-center gap-x-2">
+            <PlayIcon size={16} />
+            Click to open this one and close others
+          </div>
+          <div className="collapse-content">
+            <p className=" opacity-80">
+              constantly growing. We&apos;re constantly making mistakes.
               We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              mistakes. We&apos;re We&apos;re not always in the position that we
+              want to be at. We&apos;re constantly growing. We&apos;re
+              constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams. We&apos;re not always
+              in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re
+              constantly trying to express ourselves and actualize our dreams.
             </p>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 3} icon={<Icon id={3} open={open} />}>
-          <AccordionHeader
-            className=" hover:"
-            onClick={() => handleOpen(3)}
-          >
-            <div className="flex flex-row items-center space-x-2">
-              <PlayIcon size={16} />
-              <p> at is Material Tailwind?</p>
-            </div>
-          </AccordionHeader>
-          <AccordionBody>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </p>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 4} icon={<Icon id={4} open={open} />}>
-          <AccordionHeader
-            className=" hover:"
-            onClick={() => handleOpen(4)}
-          >
-            <div className="flex flex-row items-center space-x-2">
-              <PlayIcon size={16} />
-              <p> at is Material Tailwind?</p>
-            </div>
-          </AccordionHeader>
-          <AccordionBody>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </p>
-            We&apos;re not always in the position that we want to be at.
-            We&apos;re constantly growing. We&apos;re constantly making
-            mistakes. We&apos;re constantly trying to express ourselves and
-            actualize our dreams.
-          </AccordionBody>
-        </Accordion>
-        <Accordion open={open === 5} icon={<Icon id={5} open={open} />}>
-          <AccordionHeader
-            className=" hover:"
-            onClick={() => handleOpen(5)}
-          >
-            <div className="flex flex-row items-center space-x-2">
-              <PlayIcon size={16} />
-              <p> at is Material Tailwind?</p>
-            </div>
-          </AccordionHeader>
-          <AccordionBody>
-            <p className=" text-lg">
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
-            </p>
-          </AccordionBody>
-        </Accordion>
+          </div>
+        </div>
       </div>
     </div>
   );
