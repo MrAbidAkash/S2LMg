@@ -6,7 +6,6 @@ import Heros from "./_components/Heros";
 import RecentPod from "./_components/RecentPod";
 import OnlyS2L from "./_components/OnlyS2L";
 import FamousPod from "./_components/FamousPod";
-import OnlyS2Lcopy from "./_components/OnlyS2Lcopy";
 import ProMembers from "./_components/ProMembers";
 import { FAQ } from "./_components/FAQ";
 import Footer from "../../components/Footer";
