@@ -14,13 +14,12 @@ import SwiperUi from "./_components/Swiper";
 
 export default function Home() {
   return (
-    <div className=" p-6 flex flex-col gap-y-20 md:max-w-[1140px] mx-auto z-0  ">
-      <div className="space-y-5 h-[65dvh] flex  ">
+    <div className=" p-6 flex flex-col gap-y-20  md:max-w-[1140px] mx-auto z-0  ">
+      <div className="space-y-5 h-[65dvh] max-md:mb-40 flex  ">
         <Heros />
       </div>
       <div className="space-y-52">
         <div>
-          {/*    <SwiperUi /> */}
           <RecentPod />
         </div>
         <div>

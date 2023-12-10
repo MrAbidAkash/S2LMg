@@ -15,7 +15,7 @@ const ProMembers = () => {
       <h2 className="text-6xl font-semibold mb-4 text-warning glass p-5 rounded-lg">
         Members get even more
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-between gap-x-5  ">
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-between gap-5  ">
         <div className="items-center text-center flex flex-col justify-between space-y-5 -h-[200px]">
           <div className="flex flex-col items-center space-y-5">
             <BookAudio

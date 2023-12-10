@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function ImagesSeed2(props: any) {
   return (
-    <div className="snap-start  h-[180px] w-[165px]  cursor-pointer rounded-2xl overflow-hidden ">
+    <div className=" cursor-pointer rounded-2xl overflow-hidden ">
       <Image
         src={`/${props.imgSrc}`}
         alt="card-image"

@@ -2,8 +2,8 @@ import React from "react";
 
 const CareersPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded shadow">
+    <div className=" min-h-screen flex items-center justify-center">
+      <div className=" p-8 rounded shadow">
         <h1 className="text-3xl font-bold mb-4">Careers</h1>
         <p className="700">
           We&apos;re always looking for talented individuals to join our team.

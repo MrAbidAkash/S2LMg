@@ -7,7 +7,8 @@ import { cn } from "@/lib/utils";
 
 const Rootlayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className=" bgdarkish  w-full md:max-w-[1140px] mx-auto ">
+    <div className="  " >
+     
       {children}
     </div>
   );

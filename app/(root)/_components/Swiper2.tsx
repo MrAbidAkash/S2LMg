@@ -33,7 +33,7 @@ const SwiperUi2 = () => {
   return (
     <>
       <Swiper
-        slidesPerView={1}
+        slidesPerView={2}
         spaceBetween={10}
         rewind={true}
         /*   autoplay={{
@@ -41,9 +41,7 @@ const SwiperUi2 = () => {
           disableOnInteraction: false,
         }} */
         navigation={true}
-        pagination={{
-          clickable: true,
-        }}
+      
         breakpoints={{
           640: {
             slidesPerView: 4,
@@ -64,8 +62,11 @@ const SwiperUi2 = () => {
         {imgForDemos.map((img: string) => {
           return (
             <div key={img.length}>
-              <SwiperSlide className="">
-                <Link href={`/pod/${img}`} className="space-y-2 font-semibold">
+              <SwiperSlide className=" flex flex-col items-center justify-between ">
+                <Link
+                  href={`/pod/${img}`}
+                  className="space-y-2 font-semibold flex-1"
+                >
                   <ImagesSeed2 imgSrc={img} />
                   <h2 className="text-lg ">Oath and Honor</h2>
                 </Link>

@@ -3,8 +3,9 @@ import Image from "next/image";
 
 const Heros = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center gap-x-20 animate-fadeUp">
-      <div className=" space-y-4">
+    <div className="flex  flex-col md:flex-row items-center gap-10 animate-fadeUp">
+      
+      <div className=" space-y-4 flex-1">
         <div className="space-y-4">
           <div>
             <h2 className="text-5xl font-extrabold">
@@ -25,7 +26,9 @@ const Heros = () => {
           $14.95 a month after 30 days. Cancel anytime
         </p>
       </div>
-      <Image alt="s2k" src="/s2k.png" width={500} height={500} />
+      <div>
+        <Image alt="s2k" src="/s2k.png" width={500} height={500} />
+      </div>{" "}
     </div>
   );
 };

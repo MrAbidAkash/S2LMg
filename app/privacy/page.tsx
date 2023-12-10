@@ -1,7 +1,7 @@
 const PrivacyPage = () => {
   return (
-    <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-      <div className="bg-white p-8 rounded shadow">
+    <div className="bg-gray100 min-h-screen flex items-center justify-center">
+      <div className="bg-whte p-8 rounded shadow">
         <h1 className="text-3xl font-bold mb-4">Privacy Policy</h1>
         <p className="700">
           Your privacy is important to us. This privacy policy outlines how we
